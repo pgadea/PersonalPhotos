@@ -13,8 +13,7 @@ namespace Core.Services
     {
         private readonly string _connectionString;
         private readonly ILogger _logger;
-        public SqlServerLogins(IConfiguration configuration, ILogger<SqlServerLogins> logger
-        )
+        public SqlServerLogins(IConfiguration configuration, ILogger<SqlServerLogins> logger)
         {
             _connectionString = configuration.GetConnectionString("Default");
             _logger = logger;
