@@ -68,7 +68,7 @@ namespace PersonalPhotos.Controllers
 
             User.AddIdentity(claimIdentity);
 
-            if (!string.IsNullOrEmpty(model.ReturnUrl))
+            if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
             {
                 return Redirect(model.ReturnUrl);
             }
