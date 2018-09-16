@@ -19,7 +19,7 @@ namespace PersonalPhotos.Strategies
         {
             var client = new SmtpClient {Host = _options.Host, Port = _options.Port, Credentials = new NetworkCredential(_options.UserName, _options.Password)};
 
-            var message = new MailMessage("pgadea7@gmail.com", emailAddress)
+            var message = new MailMessage("enter from email address here", emailAddress)
             {
                 Body = body,
                 IsBodyHtml = true
